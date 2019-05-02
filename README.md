@@ -47,10 +47,10 @@ The `sample-event-payload.json` file (included in the repository) represents a s
 
 You can test the function by piping the contents of that file
 
-`cat sample-event payload.json | fn invoke fn-echo-app echo-event`
+`cat sample-event-payload.json | fn invoke fn-echo-app echo-event`
 
 You should see the JSON payload in the reponse and the same should be evident in the function logs (Papertrail) as well.
 
 ## Next steps
 
-Your next logical step would be to configure OCI Events service to trigger this function based on an event e.g. object created in an OCI Object Storage bucket and then visualize the actual logs in Papertrail.
+Your next logical step would be to configure OCI Events service to trigger this function based on an event e.g. object created in an OCI Object Storage bucket and then check the function logs to see the payload being sent by the service.
