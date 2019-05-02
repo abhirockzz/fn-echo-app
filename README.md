@@ -19,7 +19,7 @@ Download (or update) the [Fn CLI](https://github.com/fnproject/cli)
 
 ### Syslog service
 
-Oracle Functions allows you to push the function logs to a syslog endpoint. Please use [the following as an example](https://github.com/abhirockzz/fn-syslog-example) of how to configure it and test it out using [Papertrail](https://papertrailapp.com)
+Oracle Functions allows you to push the function logs to a syslog endpoint. Please use [the following as an example](https://github.com/abhirockzz/fn-syslog-example) of how to configure the application to use [Papertrail](https://papertrailapp.com) as the syslog endpoint.
 
 Once you have completed the pre-requisites, clone this repository - `git clone https://github.com/abhirockzz/fn-echo-app` and change to the correct directory - `cd fn-echo-app`
 
@@ -27,11 +27,11 @@ Once you have completed the pre-requisites, clone this repository - `git clone h
 
 You can use the console or CLI to create the app
 
-`fn create app fn-echo-app --annotation oracle.com/oci/subnetIds='SUBNET_OCIDs'`
+`fn create app fn-echo-app --annotation oracle.com/oci/subnetIds='SUBNET_OCIDs' --syslog-url <SYSLOG_ENDPOINT>`
 
 e.g.
 
-    fn create app fn-echo-app --annotation oracle.com/oci/subnetIds='["ocid1.subnet.oc1.phx.aaaaaaaaghmsma7mpqhqdhbgnby25u2zo4wqlrrcskvu7jg56dryxtfoobar"]'
+    fn create app fn-echo-app --annotation oracle.com/oci/subnetIds='["ocid1.subnet.oc1.phx.aaaaaaaaghmsma7mpqhqdhbgnby25u2zo4wqlrrcskvu7jg56dryxtfoobar"]' --syslog-url tcp://logz7.foobar.com:42424
 
 ## Deploy the application
 
