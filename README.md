@@ -6,6 +6,12 @@ This is a very simple 'echo' function which logs the recieved event payload and 
 
 Before you begin, please ensure that you have configure the Oracle Functions development environment. 
 
+### Fn CLI
+
+Download (or update) the [Fn CLI](https://github.com/fnproject/cli)
+
+`curl -LSs https://raw.githubusercontent.com/fnproject/cli/master/install | sh`
+
 ### Switch to correct context
 
 - `fn use context <your context name>`
@@ -13,9 +19,9 @@ Before you begin, please ensure that you have configure the Oracle Functions dev
 
 ### Syslog service
 
-Oracle Functions allows you to push the function logs to a syslog endpoint. Please use [the following as an example](https://github.com/abhirockzz/fn-syslog-example) of how to configure it and test it out using Papertrail
+Oracle Functions allows you to push the function logs to a syslog endpoint. Please use [the following as an example](https://github.com/abhirockzz/fn-syslog-example) of how to configure it and test it out using [Papertrail](https://papertrailapp.com)
 
-Clone this repository - `git clone fn-echo-app` and change to the correct directory - `cd fn-echo-app`
+Clone this repository - `git clone https://github.com/abhirockzz/fn-echo-app` and change to the correct directory - `cd fn-echo-app`
 
 ## Create application
 
@@ -37,14 +43,14 @@ e.g.
 
 ## Test
 
-The `sample-event-payload.json` file (included in the repostory) represents a sample payload sent by the OCI Events service when an object is created in a OCI Storage Bucket.
+The `sample-event-payload.json` file (included in the repository) represents a sample payload sent by the OCI Events service when an object is created in a OCI Storage Bucket.
 
-You can test the function by piping the content of that file
+You can test the function by piping the contents of that file
 
 `cat sample-event payload.json | fn invoke fn-echo-app echo-event`
 
-You should see the JSON payload in the reponse as the same should be evident in the function logs (papertrail) as well.
+You should see the JSON payload in the reponse and the same should be evident in the function logs (Papertrail) as well.
 
 ## Next steps
 
-Your next logical steps would be to configure OCI Events service to trigger this function based on an event e.g. object created in an OCI Object Storage bucket and then visualize the actual logs in Papertrail.
+Your next logical step would be to configure OCI Events service to trigger this function based on an event e.g. object created in an OCI Object Storage bucket and then visualize the actual logs in Papertrail.
