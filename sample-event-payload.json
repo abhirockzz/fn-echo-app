@@ -1,0 +1,23 @@
+{
+  "cloudEventsVersion": "0.1",
+  "eventID": "427aaa5b-eebd-4798-8e72-cafca330742",
+  "eventType": "com.oraclecloud.objectstorage.object.create",
+  "source": "/service/objectstorage/resourcetype/object",
+  "eventTypeVersion": "1.0",
+  "eventTime": "2019-03-28T13:01:38Z",
+  "schemaURL": null,
+  "contentType": "application/json",
+  "extensions": {
+    "compartmentId": "ocid1.compartment.oc1..foobaraaokbzj2jn3hf5kwdwqoxl2dq7u54p3tsmxrjd7s3uu7x23tfoobar"
+  },
+  "data": {
+    "namespace": "my-storage-namespace",
+    "displayName": "foo-bar.pdf",
+    "eTag": "b8e874a2-0a48-4614-a29c-a2aaa5d44242",
+    "bucketId": "ocid1.bucket.oc1.phx.foobaraanud7xwyb3ecpkmir7zzqrmrhiwt337i2ztscxm7vzti5lwfoobar",
+    "bucketName": "my-test-bucket",
+    "bucketFreeformTags": {},
+    "bucketDefinedTags": {},
+    "archivalState": "Available"
+  }
+}
