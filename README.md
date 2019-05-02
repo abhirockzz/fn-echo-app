@@ -21,7 +21,7 @@ Download (or update) the [Fn CLI](https://github.com/fnproject/cli)
 
 Oracle Functions allows you to push the function logs to a syslog endpoint. Please use [the following as an example](https://github.com/abhirockzz/fn-syslog-example) of how to configure it and test it out using [Papertrail](https://papertrailapp.com)
 
-Clone this repository - `git clone https://github.com/abhirockzz/fn-echo-app` and change to the correct directory - `cd fn-echo-app`
+Once you have completed the pre-requisites, clone this repository - `git clone https://github.com/abhirockzz/fn-echo-app` and change to the correct directory - `cd fn-echo-app`
 
 ## Create application
 
@@ -31,7 +31,7 @@ You can use the console or CLI to create the app
 
 e.g.
 
-`fn create app fn-echo-app --annotation oracle.com/oci/subnetIds='["ocid1.subnet.oc1.phx.aaaaaaaaghmsma7mpqhqdhbgnby25u2zo4wqlrrcskvu7jg56dryxtfoobar"]'`
+    fn create app fn-echo-app --annotation oracle.com/oci/subnetIds='["ocid1.subnet.oc1.phx.aaaaaaaaghmsma7mpqhqdhbgnby25u2zo4wqlrrcskvu7jg56dryxtfoobar"]'
 
 ## Deploy the application
 
